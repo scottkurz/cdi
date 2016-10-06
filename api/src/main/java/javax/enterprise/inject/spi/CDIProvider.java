@@ -29,7 +29,6 @@ public interface CDIProvider {
      * Provides access to the current container
      * 
      * @return the CDI instance for the current container
-     * @throws IllegalStateException if no CDI container is available
      */
     CDI<Object> getCDI();
 

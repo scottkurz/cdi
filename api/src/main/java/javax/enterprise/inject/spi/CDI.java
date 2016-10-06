@@ -44,7 +44,7 @@ public abstract class CDI<T> implements Instance<T> {
      * access the container is used.
      * </p>
      * 
-     * @throws IllegalStateException if no {@link CDIProvider} is available
+     * @throws IllegalStateException if no CDI provider is available
      * 
      */
     public static CDI<Object> current() {
@@ -55,7 +55,7 @@ public abstract class CDI<T> implements Instance<T> {
      *
      * @return the {@link CDIProvider} retrieved by serviceloader or setted by user
      */
-    private static CDIProvider getCDIProvider() {
+    public static CDIProvider getCDIProvider() {
         if (configuredProvider != null) {
             return configuredProvider;
         } else {
